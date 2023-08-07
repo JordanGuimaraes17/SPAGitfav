@@ -1,4 +1,4 @@
-# SPAGitfav
+
 # Github Favorites
 
 Este é um projeto simples que permite que você visualize e favorite usuários do Github. Você pode pesquisar por um usuário do Github, adicionar à lista de favoritos e também remover usuários dessa lista.
