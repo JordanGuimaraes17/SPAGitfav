@@ -28,6 +28,15 @@ export class Favorites {
         throw new Error('Usuário não encontrado!') // Lança um erro se o usuário não for encontrado
       }
 
+      // Agora, verifique se o usuário já está nos favoritos novamente antes de adicionar
+      const newUserExists = this.entries.find(
+        entry => entry.login === user.login
+      )
+
+      if (newUserExists) {
+        throw new Error('Usuário já cadastrado') // Lança um erro se o usuário já existir nos favoritos
+      }
+
       this.entries = [user, ...this.entries] // Adiciona o usuário aos favoritos
       this.update() // Atualiza a visualização dos favoritos
       this.save() // Salva os favoritos atualizados no localStorage
